@@ -23,13 +23,13 @@
   <Loggers>
     <logger name="com.ai.opt.sdk" level="info" additivity="false">
          <AppenderRef ref="RollingFile" />
-         <AppenderRef ref="STDOUT" />
+         <AppenderRef ref="debug" />
     </logger>
 	<logger name="org.mybatis" additivity="true">
-		<level value="DEBUG" />
+		<level value="debug" />
 	</logger>
 	<logger name="java.sql.ResultSet" additivity="true">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	<logger name="org.apache.ibatis" additivity="true">
 		<level value="debug" />
@@ -45,8 +45,12 @@
 	</logger>  
 	<logger name="com.ai.opt.data.dao.mapper" level="debug" additivity="false">
           <AppenderRef ref="RollingFile" />
-	      <AppenderRef ref="STDOUT" />
+	      <AppenderRef ref="debug" />
     </logger>
+ 	<logger name="com.ai.opt.sso" level="debug" additivity="false">
+          <AppenderRef ref="RollingFile" />
+	      <AppenderRef ref="debug" />
+    </logger>   
     <Root level="error">
       <AppenderRef ref="RollingFile" />
       <AppenderRef ref="STDOUT" />
