@@ -1,6 +1,6 @@
 #!/bin/sh
 #env
-APP_NAME="general.uac.web"
+APP_NAME="yc.uac.web"
 
 #set base home
 RESOURCES_HOME=${CATALINA_HOME}/webapps/ROOT/WEB-INF/classes
