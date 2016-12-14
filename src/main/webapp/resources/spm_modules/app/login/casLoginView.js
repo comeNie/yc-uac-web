@@ -46,6 +46,7 @@ function resetErrMsg(){
   }//end of encryPwd
   
   function dologin() {
+	 
   	if(validate()){ 
 		var inputPassword = document.getElementById("password").value;
 		/*var onceCode = "AIOPT_SALT_KEY";
@@ -67,7 +68,7 @@ function resetErrMsg(){
 function validate() {
 	var username=document.getElementById("username").value;
 	var password=document.getElementById("password").value;
-	var captcha=document.getElementById("captchaCode").value;
+	//var captcha=document.getElementById("captchaCode").value;
 	try {
 		if (isNull(username)) {
 			showErrMsg("请输入用户名");
@@ -81,12 +82,13 @@ function validate() {
 		}else{
 			resetErrMsg();
 		}
-		if (isNull(captcha)) {
+/*		if (isNull(captcha)) {
 			showErrMsg("请输入验证码");
 			return false;
-		}else{
-			resetErrMsg();
 		}
+		else{
+			resetErrMsg();
+		}*/
 		
 		return true;
 	} catch (ex) {

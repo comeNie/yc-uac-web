@@ -83,7 +83,7 @@ public final class BssCredentialsAuthencationHandler extends AbstractPreAndPostP
 		BssCredentials bssCredentials = (BssCredentials) credentials;
 		final String username = bssCredentials.getUsername();
 		final String pwdFromPage = bssCredentials.getPassword();
-		final String captchaCode = bssCredentials.getCaptchaCode().toLowerCase();
+		//final String captchaCode = bssCredentials.getCaptchaCode().toLowerCase();
 	    final String sessionId = bssCredentials.getSessionId();
 		//用户名非空校验
 		if(!StringUtils.hasText(username)){
@@ -98,12 +98,12 @@ public final class BssCredentialsAuthencationHandler extends AbstractPreAndPostP
 		
 		
 		 // 验证码非空校验
-        if (!StringUtils.hasText(captchaCode)) {
+/*        if (!StringUtils.hasText(captchaCode)) {
             logger.error("请输入验证码");
             throw new CaptchaIsNullException();
-        }
+        }*/
 
-        ICacheClient iCacheClient = MCSClientFactory.getCacheClient(Register.CACHE_NAMESPACE);
+/*        ICacheClient iCacheClient = MCSClientFactory.getCacheClient(Register.CACHE_NAMESPACE);
         // 生成的校验码
         String cookieCaptcha = iCacheClient.get(Register.CACHE_KEY_VERIFY_PICTURE + sessionId)
                 .toLowerCase();
@@ -114,7 +114,7 @@ public final class BssCredentialsAuthencationHandler extends AbstractPreAndPostP
         // 校验验证码
         if (!cookieCaptcha.equals(bssCredentials.getCaptchaCode().toLowerCase())) {
             throw new CaptchaErrorException();
-        }
+        }*/
 		
 		
 		UserLoginResponse user = null;

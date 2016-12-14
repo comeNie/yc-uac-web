@@ -13,6 +13,10 @@
     
     String _baasBase=_base+"/theme/changhong";
     request.setAttribute("_baasBase", _baasBase);
+    
+    String _ycBase=_base+"/theme/yc";
+    request.setAttribute("_ycBase", _ycBase);
+    
 %>
 <%
 String default_index_url = CCSClientFactory.getDefaultConfigClient().get(Constants.URLConstant.DEFAULT_INDEX_URL_KEY);
@@ -27,6 +31,7 @@ request.setAttribute("citic_help_index_url",citic_help_index_url ); */
 %>
 <script>
     var _base = "${_base}";
+    var _ycBase = "${_ycBase}";
 </script>
 <script src="${_base}/resources/spm_modules/jquery/1.9.1/jquery.js"></script>
 <script src="${_base}/resources/spm_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -35,11 +40,8 @@ request.setAttribute("citic_help_index_url",citic_help_index_url ); */
 <script src="${_base}/resources/spm_modules/app/core/config.js"></script>
 
 <!-- UED style begin -->
-<link rel="stylesheet" type="text/css" href="${_base}/theme/changhong/css/bootstrap/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="${_base}/theme/changhong/css/bootstrap/font-awesome.css"/>
-<link rel="stylesheet" type="text/css" href="${_base}/theme/changhong/css/modular/frame.css"/>
-<link rel="stylesheet" type="text/css" href="${_base}/theme/changhong/css/modular/global.css"/>
-<link rel="stylesheet" type="text/css" href="${_base}/theme/changhong/css/modular/login-regsiter.css"/>
+    <link href="${_ycBase}/css/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="${_ycBase}/css/modular/modular.css" rel="stylesheet" type="text/css"/>
 <!-- UED style end -->
 
 
