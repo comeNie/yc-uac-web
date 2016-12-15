@@ -31,12 +31,13 @@
 			<div class="user-center">
 				<div class="user-list">
 					<ul>
-					<div class="login-note" id="errorMsg"><form:errors path="*" id="msg" cssClass="errors" element="div" htmlEscape="false" /></div>
+					
 						<li>
 							<p><img src="${_ycBase}/images/urse-logo.png" /></p>
 							<p class="title">后台管理系统</p>
 						</li>
 						<li class="enword"><img src="${_ycBase}/images/word.jpg" /></li>
+						<div class="login-note" id="errorMsg" style="color:red;"><form:errors path="*" id="msg" cssClass="errors" element="div" htmlEscape="false" /></div>
 						<li class="mt-30"><form:input cssClass="int-ntext" cssErrorClass="error" id="username" tabindex="1" accesskey="${userNameAccessKey}" path="username" autocomplete="off" htmlEscape="true" placeholder="登录名/手机号／邮箱"/><i class="icon iconfont">&#xe60c;</i></li>
 						<li><form:password  cssClass="int-ntext" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off"  placeholder="密码" onkeydown="encryptPwd(event)"/><i class="icon iconfont">&#xe609;</i></li>
 						<li class="pasw">
