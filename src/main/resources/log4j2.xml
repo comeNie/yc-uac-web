@@ -25,6 +25,11 @@
          <AppenderRef ref="RollingFile" />
          <AppenderRef ref="debug" />
     </logger>
+     <logger name="    com.ai.opt.sso" level="info" additivity="false">
+         <AppenderRef ref="RollingFile" />
+         <AppenderRef ref="debug" />
+    </logger>   
+
 	<logger name="org.mybatis" additivity="true">
 		<level value="debug" />
 	</logger>
@@ -51,7 +56,7 @@
           <AppenderRef ref="RollingFile" />
 	      <AppenderRef ref="debug" />
     </logger>   
-    <Root level="error">
+    <Root level="debug">
       <AppenderRef ref="RollingFile" />
       <AppenderRef ref="STDOUT" />
     </Root>

@@ -94,9 +94,11 @@
         apply DEBUG level logging on a an org.springframework.* package level (i.e. org.springframework.dao)
     -->
     <logger name="org.springframework">
-        <level value="WARN" />
+        <level value="debug" />
     </logger>
-
+    <logger name="com.ai.opt">
+        <level value="debug" />
+    </logger>
     <logger name="org.springframework.webflow">
         <level value="WARN" />
     </logger>
@@ -117,7 +119,7 @@
         cleartext authentication credentials
     -->
     <logger name="org.jasig.cas.web.flow" additivity="true">
-        <level value="INFO" />
+        <level value="debug" />
         <appender-ref ref="cas" />
     </logger>
 
@@ -126,7 +128,7 @@
       logger to System.out.
     -->
     <root>
-        <level value="ERROR" />
+        <level value="debug" />
         <appender-ref ref="console" />
     </root>
 </log4j:configuration>
