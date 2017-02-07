@@ -1,11 +1,11 @@
 # Pull base image  
-FROM 10.19.13.36:5000/tomcat:7.x
+FROM 10.19.13.36:5000/tomcat:7.x-GMT 
 MAINTAINER gucl<gucl@asiainfo.com>  
 
 # Install tomcat7 
 RUN rm -rf /opt/tomcat/webapps/* && mkdir /opt/tomcat/webapps/ROOT
 COPY ./build/libs/uac.war /opt/tomcat/webapps/ROOT/ROOT.war
-COPY ./script/server.xml /opt/tomcat/conf/server.xml
+
 RUN cd /opt/tomcat/webapps/ROOT && jar -xf ROOT.war && rm -rf /opt/tomcat/webapps/ROOT.war
 
 ADD ./script/start-web.sh /start-web.sh
