@@ -1,5 +1,5 @@
 # Pull base image  
-FROM tomcat:7
+FROM 10.19.13.36:5000/tomcat:7.x-GMT 
 MAINTAINER gucl<gucl@asiainfo.com>  
 
 # Install tomcat7 
